@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Community Care System</title>
+    <link rel="icon" href="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--    icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--    jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!--    popper.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <!--    Latest compiled JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- post get request -->
+    <script src="../inc/httpRequest.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="my-4 text-center" style="margin-bottom:0;background: white">
+            <h1>Welcome to Community Care!</h1>
+            <p>Help each other and love each other</p>
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Publish</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <br>
+
+        <div class="row mt-16">
+            <div class="col-sm-2">
+                <div class="card rounded-0 border-0 bg-transparent">
+                    <div class="card-body">
+                        <div>
+                            <!--Avatar and Screen Name-->
+                            <div>
+                                <a>
+                                    <img class="rounded-circle" src="../resources/header.jpg" alt="avatar"
+                                        style="width: 30px;">
+                                </a>
+                                <a href="#" class="text-body ml-2"><span style="color: #3b5998;"><b>Jane</b></span></a>
+
+                            </div>
+                            <!--                        Personal Details-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <i class="col-1 fas fa-venus-mars"></i>
+                                    <p class="col-7">Gender</p>
+                                </div>
+
+                                <div class="row">
+                                    <i class="col-1 fas fa-map-marker-alt"></i>
+                                    <p class="col-7">Location</p>
+                                </div>
+                            </div>
+                            <!--                    Manage profile-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <a class="btn btn-outline-info mx-auto btn-block" href="#" role="button" name="ManageProfile" id="manage-profile">Manage My Profile</a>
+                                </div>
+                            </div>
+                            <!--                    logout-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <a class="btn btn-outline-danger mx-auto btn-block" href="../index.html" role="button" name="Logout" id="logout">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--        Community tasks-->
+            <div class="col-sm-10">
+                <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+                    <div class="card-body">
+                        <div class="row">
+                            <form>
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                                    <small id="titleHelp" class="form-text text-muted">A short title for others to pick
+                                        it up.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="details">Details</label>
+                                    <input type="text" class="form-control" id="details">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Street</label>
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2">Unit (optional)</label>
+                                    <input type="text" class="form-control" id="inputAddress2" placeholder="Unit 1">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputCity">City</label>
+                                        <input type="text" class="form-control" id="inputCity">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">State</label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>NSW</option>
+                                            <option>NT</option>
+                                            <option>QLD</option>
+                                            <option>SA</option>
+                                            <option>TAS</option>
+                                            <option>VIC</option>
+                                            <option>WA</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputZip">Zip</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("#submit").addEventListener("click", (e) => {
+                e.preventDefault();
+                let title = document.querySelector('#title').value;
+                let details = document.querySelector('#details').value;
+                let street = document.querySelector('#inputAddress').value;
+                let unit = document.querySelector('#inputAddress2').value;
+                let city = document.querySelector('#inputCity').value;
+                let state = document.querySelector('#inputState').value;
+                let zip = document.querySelector('#inputZip').value;
+
+                let body = {
+                    title,
+                    details,
+                    taskDate: new Date(),
+                    location: `${unit} ${street}, ${city}, ${state}, ${zip}`
+                };
+
+                let xhr = new HttpRequest();
+                xhr.post("https://xiao.engineer/community/api/createTask",
+                    body, (err, response) => {
+                        console.log(response);
+                        if (response.success) {
+                            alert("New task published!");
+                            $('form').get(0).reset()
+                        }
+                    });
+            });
+        });
+    </script>
+</body>
+
+<footer style="position: fixed;bottom: 0;">
+    <p><small>&copy; 2020 Stay at Home<br>Made in Melbourne with love</small></p>
+</footer>
+
+</html>

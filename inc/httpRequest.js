@@ -2,22 +2,23 @@ function HttpRequest() {
     this.http = new XMLHttpRequest();
 }
 
-HttpRequest.prototype.get = function (url, callback) {
-    function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
         }
-        return "";
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
+    return "";
+}
+HttpRequest.prototype.get = function (url, callback) {
+
 
     this.http.open('GET', url, true);
     this.http.timeout = 5000;
@@ -43,6 +44,10 @@ HttpRequest.prototype.get = function (url, callback) {
 HttpRequest.prototype.post = function (url, data, callback) {
     this.http.open('POST', url, true);
     this.http.timeout = 5000;
+    let access_token = getCookie("access_token");
+    if(access_token){
+        this.http.setRequestHeader('Access-Token', access_token);
+    }
     this.http.setRequestHeader('Content-type', 'application/json');
     let self = this;
     this.http.onload = function () {
