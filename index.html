@@ -62,26 +62,31 @@
         xhr.post("https://xiao.engineer/community/api/authenticate",
           authenticate, (err, response) => {
             console.log(response);
-            document.cookie = `access_token=${response.access_token}`;
-            if (response.roles[0].role_name === "responder") {
-              let xhr2 = new HttpRequest();
-              xhr2.get("https://xiao.engineer/community/api/listTask",
-                (err, response) => {
-                  console.log(response);
-                  document.cookie = `my_list=${JSON.stringify(response)}`
-                  window.location.href = "./view/responder.html"
-                });
-            } else if (response.roles[0].role_name === "publisher") {
-              let xhr2 = new HttpRequest();
-              xhr2.get("https://xiao.engineer/community/api/listMyTask",
-                (err, response) => {
-                  console.log(response);
-                  document.cookie = `my_list=${JSON.stringify(response)}`
-                  window.location.href = "./view/publisher.html"
-                });
+            if (response.error) {
+              alert("Login failed, please try again!");
+            } else {
+              document.cookie = `access_token=${response.access_token}`;
+              if (response.roles[0].role_name === "responder") {
+                let xhr2 = new HttpRequest();
+                xhr2.get("https://xiao.engineer/community/api/listTask",
+                  (err, response) => {
+                    console.log(response);
+                    document.cookie = `my_list=${JSON.stringify(response)}`
+                    window.location.href = "./view/responder.html"
+                  });
+              } else if (response.roles[0].role_name === "publisher") {
+                let xhr2 = new HttpRequest();
+                xhr2.get("https://xiao.engineer/community/api/listMyTask",
+                  (err, response) => {
+                    console.log(response);
+                    document.cookie = `my_list=${JSON.stringify(response)}`
+                    window.location.href = "./view/publisher.html"
+                  });
+              } else {
+                alert("Login failed, please try again!");
+              }
             }
           });
-
       });
     });
   </script>
