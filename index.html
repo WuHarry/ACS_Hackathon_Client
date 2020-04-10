@@ -79,15 +79,15 @@
                 (err, response) => {
                   console.log(response);
                   document.cookie = `my_list=${JSON.stringify(response)}`
-                  window.location.href = "./responder.html"
+                  window.location.href = "./view/responder.html"
                 });
             } else if (response.roles[0].role_name === "publisher") {
               let xhr2 = new HttpRequest();
-              xhr2.get("https://xiao.engineer/community/api/listTask",
+              xhr2.get("https://xiao.engineer/community/api/listMyTask",
                 (err, response) => {
                   console.log(response);
                   document.cookie = `my_list=${JSON.stringify(response)}`
-                  window.location.href = "./publisher.html"
+                  window.location.href = "./view/publisher.html"
                 });
             }
           });
