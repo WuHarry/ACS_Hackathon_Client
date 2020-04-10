@@ -44,6 +44,10 @@ HttpRequest.prototype.get = function (url, callback) {
 HttpRequest.prototype.post = function (url, data, callback) {
     this.http.open('POST', url, true);
     this.http.timeout = 5000;
+    let access_token = getCookie("access_token");
+    if(access_token){
+        this.http.setRequestHeader('Access-Token', access_token);
+    }
     this.http.setRequestHeader('Content-type', 'application/json');
     let self = this;
     this.http.onload = function () {
