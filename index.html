@@ -43,7 +43,7 @@
             <input type="password" class="form-control" id="password">
         </div>
         
-        <button type="submit" class="btn btn-primary" id="submit">Submit
+        <button type="submit" class="btn btn-primary" id="submit">Login
         </button>
     </form>
 </div>
@@ -63,18 +63,17 @@
             xhr.post("https://xiao.engineer/community/api/authenticate",
                 authenticate, (err, response)=>{
                     console.log(response);
-                    document.cookie = "access_token=";
-                    document.cookie = "access_token="+response.access_token;
-
+                    document.cookie = `access_token=${response.access_token}`;
                     let xhr2 = new HttpRequest();
                     xhr2.get("https://xiao.engineer/community/api/listTask",
                         (err, response)=>{
                             console.log(response);
+                            document.cookie=`my_list=${JSON.stringify(response)}`
+                            window.location.href="./reviewList.html"
                         });
                 });
+            
         });
-
-
     });
 </script>
 </body>
