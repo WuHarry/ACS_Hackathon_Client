@@ -52,23 +52,23 @@
                         <!--Avatar and Screen Name-->
                         <div>
                             <a>
-                                <img class="rounded-circle" src="../resources/header.jpg" alt="avatar"
-                                     style="width: 30px;">
+                                <img class="rounded-circle" src="https://5b0988e595225.cdn.sohucs.com/images/20181128/e44ca54a854c4860b9738b11425845a2.jpeg" alt="avatar"
+                                     style="width: 50px;">
                             </a>
                             <a href="#" class="text-body ml-2"><span
-                                    style="color: #3b5998;"><b>responder_name</b></span></a>
+                                    style="color: #3b5998;"><b>Bob</b></span></a>
 
                         </div>
                         <!--                        Personal Details-->
                         <div class="text-dark mx-2 mt-3">
                             <div class="row">
                                 <i class="col-1 fas fa-venus-mars"></i>
-                                <p class="col-7">Gender</p>
+                                <p class="col-10">Male</p>
                             </div>
 
                             <div class="row">
                                 <i class="col-1 fas fa-map-marker-alt"></i>
-                                <p class="col-7">Location</p>
+                                <p class="col-10">Melbourne, VIC</p>
                             </div>
                         </div>
 
@@ -83,23 +83,32 @@
         <!--        My tasks-->
         <div class="col-sm-8" style="">
             <h3 class="text-info mt-n2 mb-2">My Tasks</h3>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+            <div class="card rounded-0 shadow-sm mb-3 bg-white">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-10">
-                            <b><a style="color: #3b5998"
-                                  href="">Help the disabled to buy daily necessities</a><br></b>
-                            <small>Due time: 2020-04-11</small>
-                            <p class="mt-2">Here is the task content</p>
+                            <b><h5 style="color: #3b5998"
+                                 >Help the disabled to buy daily necessities</h5></b>
+                            <small>Due time: 2020-04-10</small>
+                            <ul>
+                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-10 14:00</li>
+                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                    <input type="checkbox" checked> <small>Milk</small><br></input>
+                                    <input type="checkbox" checked> <small>Vegetables</small><br></input>
+                                    <input type="checkbox" checked> <SMALL>Fruits</SMALL><br></input>
+                                </li>
+                                <li class="mt-2 font-italic"><b>Task Location:</b> 118 A'Bectkett St, Melbourne, VIC</li>
+                            </ul>
                             <div class="btn-group-sm mt-2">
-                                <button type="button" id="start1" name="reply" class="btn btn-primary" disabled
+                                <button type="button" id="start1" class="btn btn-primary" disabled
                                 >Started
                                 </button>
-                                <button type="button" class="btn btn-info" disabled
+                                <button type="button" id="complete1" class="btn btn-info" disabled
                                         onclick="">Completed
                                 </button>
                             </div>
                         </div>
+
                         <div class="col-2">
                             <p>Completed</p>
                         </div>
@@ -107,58 +116,81 @@
 
                 </div>
             </div>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+            <div class="card rounded-0 shadow-sm mb-3 bg-white">
                 <div class="card-body">
                     <div class="row">
-
                         <div class="col-10">
-                            <b><a style="color: #3b5998"
-                                  href="">Help the disabled to buy daily necessities</a><br></b>
+                            <b><h5 style="color: #3b5998"
+                            >Deliver masks to community elders</h5></b>
                             <small>Due time: 2020-04-11</small>
-                            <p class="mt-2">Here is the task content</p>
+                            <ul>
+                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-11 11:00</li>
+                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                    Volunteers are needed to deliver 10 N95 masks to each senior citizen in oak park for prevention of covid-19
+                                </li>
+                                <li class="mt-2 font-italic"><b>Task Location:</b> Snell Gr / Waterloo Rd, Oak Park VIC 3046</li>
+                            </ul>
                             <div class="btn-group-sm mt-2">
-                                <button type="button" id="start2" name="reply" class="btn btn-primary" disabled
+                                <button type="button" class="btn btn-primary" disabled
                                 >Started
                                 </button>
                                 <button type="button" class="btn btn-outline-info"
-                                        onclick="">Complete!
+                                        onclick="changeCompleteStatus(this,'status2')">Complete!
                                 </button>
                             </div>
                         </div>
                         <div class="col-2">
-                            <p>In Progress</p>
+                            <p id="status2">In Progress</p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+            <div class="card rounded-0 shadow-sm mb-3 bg-white">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-10">
-                            <b><a style="color: #3b5998"
-                                  href="">Help the disabled to buy daily necessities</a><br></b>
-                            <small>Due time: 2020-04-11</small>
-                            <p class="mt-2">Here is the task content</p>
+                            <b><h5 style="color: #3b5998"
+                            >Help an elderly disabled person buy toilet paper and hand sanitizer</h5></b>
+                            <small>Due time: 2020-04-12</small>
+                            <ul>
+                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-12 16:00</li>
+                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                    An elderly disabled man without children needed a volunteer to purchase a pack of toilet paper and two bottles of hand sanitizer in Coles
+                                </li>
+                                <li class="mt-2 font-italic"><b>Task Location:</b> 550 Swanston Street, Carlton Victoria 3053</li>
+                            </ul>
                             <div class="btn-group-sm mt-2">
-                                <button type="button" id="start3" name="reply" class="btn btn-outline-primary"
+                                <button type="button" class="btn btn-outline-primary" onclick="changeStartStatus(this,'status3')"
                                 >Start
                                 </button>
                                 <button type="button" class="btn btn-outline-info"
-                                        onclick="">Complete!
+                                        onclick="changeCompleteStatus(this,'status3')">Complete!
                                 </button>
                             </div>
                         </div>
                         <div class="col-2">
-                            <p>To do</p>
+                            <p id="status3">To do</p>
                         </div>
                     </div>
 
                 </div>
             </div>
             <script>
-                let xhr=new HttpRequest();
-                console.log(xhr.get(HttpRequest, httpRequest.js));
+                const changeStartStatus=(btn,statusid)=>{
+                    btn.className="btn btn-primary";
+                    btn.innerText="Started";
+                    btn.disabled="disabled";
+                    document.getElementById(statusid).innerText="In Progress";
+
+                }
+
+                const changeCompleteStatus=(btn,statusid)=>{
+                    btn.className="btn btn-info";
+                    btn.innerText="Completed";
+                    btn.disabled="disabled";
+                    document.getElementById(statusid).innerText="Completed";
+                }
             </script>
         </div>
 
