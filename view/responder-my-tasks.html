@@ -1,203 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Community Care System<</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--    CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--    icons-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <!--    jQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <!--    popper.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <!--    Latest compiled JavaScript-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <!-- post get request -->
-    <script src="../inc/httpRequest.js"></script>
+    <title>Community Care System<< /title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!--    CSS-->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                crossorigin="anonymous">
+            <!--    icons-->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+                integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+                crossorigin="anonymous">
+            <!--    jQuery-->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <!--    popper.js-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <!--    Latest compiled JavaScript-->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+            <!-- post get request -->
+            <script src="../inc/httpRequest.js"></script>
 </head>
+
 <body>
-<div class="container-fluid">
-    <div class="my-4 text-center" style="margin-bottom:0;background: white">
-        <h1>Welcome to Community Care!</h1>
-        <p>Help each other and love each other</p>
-    </div>
+    <div class="container-fluid">
+        <div class="my-4 text-center" style="margin-bottom:0;background: white">
+            <h1>Welcome to Community Care!</h1>
+            <p>Help each other and love each other</p>
+        </div>
 
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="responder.html">Community Tasks</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">My tasks</a>
-            </li>
-        </ul>
-    </nav>
-    <br>
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="responder.html">Community Tasks</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">My tasks</a>
+                </li>
+            </ul>
+        </nav>
+        <br>
 
-    <div class="row mt-16">
-        <div class="col-sm-2" style="">
-            <div class="card rounded-0 border-0 bg-transparent">
-                <div class="card-body">
-                    <div>
-                        <!--Avatar and Screen Name-->
+        <div class="row mt-16">
+            <div class="col-sm-2">
+                <div class="card rounded-0 border-0 bg-transparent">
+                    <div class="card-body">
                         <div>
-                            <a>
-                                <img class="rounded-circle" src="https://5b0988e595225.cdn.sohucs.com/images/20181128/e44ca54a854c4860b9738b11425845a2.jpeg" alt="avatar"
-                                     style="width: 50px;">
-                            </a>
-                            <a href="#" class="text-body ml-2"><span
-                                    style="color: #3b5998;"><b>Bob</b></span></a>
+                            <!--Avatar and Screen Name-->
+                            <div>
+                                <a>
+                                    <img class="rounded-circle"
+                                        src="https://5b0988e595225.cdn.sohucs.com/images/20181128/e44ca54a854c4860b9738b11425845a2.jpeg"
+                                        alt="avatar" style="width: 50px;">
+                                </a>
+                                <a href="#" class="text-body ml-2"><span style="color: #3b5998;"><b>Bob</b></span></a>
 
-                        </div>
-                        <!--                        Personal Details-->
-                        <div class="text-dark mx-2 mt-3">
-                            <div class="row">
-                                <i class="col-1 fas fa-venus-mars"></i>
-                                <p class="col-10">Male</p>
+                            </div>
+                            <!--                        Personal Details-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <i class="col-1 fas fa-venus-mars"></i>
+                                    <p class="col-10">Male</p>
+                                </div>
+
+                                <div class="row">
+                                    <i class="col-1 fas fa-map-marker-alt"></i>
+                                    <p class="col-10">Melbourne, VIC</p>
+                                </div>
+                            </div>
+                            <!--                    Manage profile-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <a class="btn btn-outline-info mx-auto btn-block" href="#" role="button"
+                                        name="ManageProfile" id="manage-profile">Manage My Profile</a>
+                                </div>
+                            </div>
+                            <!--                    logout-->
+                            <div class="text-dark mx-2 mt-3">
+                                <div class="row">
+                                    <a class="btn btn-outline-danger mx-auto btn-block" href="../index.html"
+                                        role="button" name="Logout" id="logout">Logout</a>
+                                </div>
                             </div>
 
-                            <div class="row">
-                                <i class="col-1 fas fa-map-marker-alt"></i>
-                                <p class="col-10">Melbourne, VIC</p>
-                            </div>
                         </div>
-
                     </div>
-                    <!--                    Manage profile-->
-                    <button class="btn btn-outline-info mx-auto" name="ManageProfile" id="manage-profile">
-                        <a href="#" class="mx-4 text-info">Manage My Profile </a>
-                    </button>
                 </div>
             </div>
-        </div>
-        <!--        My tasks-->
-        <div class="col-sm-8" style="">
-            <h3 class="text-info mt-n2 mb-2">My Tasks</h3>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-10">
-                            <b><h5 style="color: #3b5998"
-                                 >Help the disabled to buy daily necessities</h5></b>
-                            <small>Due time: 2020-04-10</small>
-                            <ul>
-                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-10 14:00</li>
-                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
-                                    <input type="checkbox" checked> <small>Milk</small><br></input>
-                                    <input type="checkbox" checked> <small>Vegetables</small><br></input>
-                                    <input type="checkbox" checked> <SMALL>Fruits</SMALL><br></input>
-                                </li>
-                                <li class="mt-2 font-italic"><b>Task Location:</b> 118 A'Bectkett St, Melbourne, VIC</li>
-                            </ul>
-                            <div class="btn-group-sm mt-2">
-                                <button type="button" id="start1" class="btn btn-primary" disabled
-                                >Started
-                                </button>
-                                <button type="button" id="complete1" class="btn btn-info" disabled
+            <!--        My tasks-->
+            <div class="col-sm-8">
+                <h3 class="text-info mt-n2 mb-2">My Tasks</h3>
+                <div class="card rounded-0 shadow-sm mb-3 bg-white">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-10">
+                                <b>
+                                    <h5 style="color: #3b5998">Help the disabled to buy daily necessities</h5>
+                                </b>
+                                <small>Due time: 2020-04-10</small>
+                                <ul>
+                                    <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-10 14:00</li>
+                                    <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                        <input type="checkbox" checked> <small>Milk</small><br></input>
+                                        <input type="checkbox" checked> <small>Vegetables</small><br></input>
+                                        <input type="checkbox" checked> <SMALL>Fruits</SMALL><br></input>
+                                    </li>
+                                    <li class="mt-2 font-italic"><b>Task Location:</b> 118 A'Bectkett St, Melbourne, VIC
+                                    </li>
+                                </ul>
+                                <div class="btn-group-sm mt-2">
+                                    <button type="button" id="start1" class="btn btn-primary" disabled>Started
+                                    </button>
+                                    <button type="button" id="complete1" class="btn btn-info" disabled
                                         onclick="">Completed
-                                </button>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <p>Completed</p>
                             </div>
                         </div>
 
-                        <div class="col-2">
-                            <p>Completed</p>
-                        </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-10">
-                            <b><h5 style="color: #3b5998"
-                            >Deliver masks to community elders</h5></b>
-                            <small>Due time: 2020-04-11</small>
-                            <ul>
-                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-11 11:00</li>
-                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
-                                    Volunteers are needed to deliver 10 N95 masks to each senior citizen in oak park for prevention of covid-19
-                                </li>
-                                <li class="mt-2 font-italic"><b>Task Location:</b> Snell Gr / Waterloo Rd, Oak Park VIC 3046</li>
-                            </ul>
-                            <div class="btn-group-sm mt-2">
-                                <button type="button" class="btn btn-primary" disabled
-                                >Started
-                                </button>
-                                <button type="button" class="btn btn-outline-info"
+                <div class="card rounded-0 shadow-sm mb-3 bg-white">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-10">
+                                <b>
+                                    <h5 style="color: #3b5998">Deliver masks to community elders</h5>
+                                </b>
+                                <small>Due time: 2020-04-11</small>
+                                <ul>
+                                    <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-11 11:00</li>
+                                    <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                        Volunteers are needed to deliver 10 N95 masks to each senior citizen in oak park
+                                        for prevention of covid-19
+                                    </li>
+                                    <li class="mt-2 font-italic"><b>Task Location:</b> Snell Gr / Waterloo Rd, Oak Park
+                                        VIC 3046</li>
+                                </ul>
+                                <div class="btn-group-sm mt-2">
+                                    <button type="button" class="btn btn-primary" disabled>Started
+                                    </button>
+                                    <button type="button" class="btn btn-outline-info"
                                         onclick="changeCompleteStatus(this,'status2')">Complete!
-                                </button>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <p id="status2">In Progress</p>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <p id="status2">In Progress</p>
-                        </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
-            <div class="card rounded-0 shadow-sm mb-3 bg-white">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-10">
-                            <b><h5 style="color: #3b5998"
-                            >Help an elderly disabled person buy toilet paper and hand sanitizer</h5></b>
-                            <small>Due time: 2020-04-12</small>
-                            <ul>
-                                <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-12 16:00</li>
-                                <li class="mt-2 font-italic"><b>Task Details:</b><br>
-                                    An elderly disabled man without children needed a volunteer to purchase a pack of toilet paper and two bottles of hand sanitizer in Coles
-                                </li>
-                                <li class="mt-2 font-italic"><b>Task Location:</b> 550 Swanston Street, Carlton Victoria 3053</li>
-                            </ul>
-                            <div class="btn-group-sm mt-2">
-                                <button type="button" class="btn btn-outline-primary" onclick="changeStartStatus(this,'status3')"
-                                >Start
-                                </button>
-                                <button type="button" class="btn btn-outline-info"
+                <div class="card rounded-0 shadow-sm mb-3 bg-white">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-10">
+                                <b>
+                                    <h5 style="color: #3b5998">Help an elderly disabled person buy toilet paper and hand
+                                        sanitizer</h5>
+                                </b>
+                                <small>Due time: 2020-04-12</small>
+                                <ul>
+                                    <li class="mt-2 font-italic"><b>Task Date:</b> 2020-04-12 16:00</li>
+                                    <li class="mt-2 font-italic"><b>Task Details:</b><br>
+                                        An elderly disabled man without children needed a volunteer to purchase a pack
+                                        of toilet paper and two bottles of hand sanitizer in Coles
+                                    </li>
+                                    <li class="mt-2 font-italic"><b>Task Location:</b> 550 Swanston Street, Carlton
+                                        Victoria 3053</li>
+                                </ul>
+                                <div class="btn-group-sm mt-2">
+                                    <button type="button" class="btn btn-outline-primary"
+                                        onclick="changeStartStatus(this,'status3')">Start
+                                    </button>
+                                    <button type="button" class="btn btn-outline-info"
                                         onclick="changeCompleteStatus(this,'status3')">Complete!
-                                </button>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <p id="status3">To do</p>
                             </div>
                         </div>
-                        <div class="col-2">
-                            <p id="status3">To do</p>
-                        </div>
+
                     </div>
-
                 </div>
+                <script>
+                    const changeStartStatus = (btn, statusid) => {
+                        btn.className = "btn btn-primary";
+                        btn.innerText = "Started";
+                        btn.disabled = "disabled";
+                        document.getElementById(statusid).innerText = "In Progress";
+
+                    }
+
+                    const changeCompleteStatus = (btn, statusid) => {
+                        btn.className = "btn btn-info";
+                        btn.innerText = "Completed";
+                        btn.disabled = "disabled";
+                        document.getElementById(statusid).innerText = "Completed";
+                    }
+                </script>
             </div>
-            <script>
-                const changeStartStatus=(btn,statusid)=>{
-                    btn.className="btn btn-primary";
-                    btn.innerText="Started";
-                    btn.disabled="disabled";
-                    document.getElementById(statusid).innerText="In Progress";
 
-                }
-
-                const changeCompleteStatus=(btn,statusid)=>{
-                    btn.className="btn btn-info";
-                    btn.innerText="Completed";
-                    btn.disabled="disabled";
-                    document.getElementById(statusid).innerText="Completed";
-                }
-            </script>
         </div>
-
     </div>
-</div>
 </body>
 <footer style="position: fixed;bottom: 0; ">
     <p><small>&copy; 2020 Stay at Home<br>Made in Melbourne with love</small></p>
 </footer>
+
 </html>
