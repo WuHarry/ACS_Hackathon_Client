@@ -2,172 +2,251 @@
 <html lang="en">
 
 <head>
-  <title>Community Care System</title>
-  <link rel="icon" href="">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--    CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!--    icons-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <!--    jQuery-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <!--    popper.js-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <!--    Latest compiled JavaScript-->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    <title>Community Care System</title>
+    <link rel="icon" href="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--    icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--    jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <!--    popper.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <!--    Latest compiled JavaScript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 
-  <!-- post get request -->
-  <script src="../inc/httpRequest.js"></script>
+    <!-- post get request -->
+    <script src="../inc/httpRequest.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="my-4 text-center" style="margin-bottom:0;background: white">
-      <h1>Welcome to Community Care!</h1>
-      <p>Help each other and love each other</p>
+        <h1>Welcome to Community Care!</h1>
+        <p>Help each other and love each other</p>
     </div>
 
     <nav class="navbar navbar-expand-sm bg-info navbar-dark">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Community Tasks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">My tasks</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Community Tasks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">My tasks</a>
+            </li>
+        </ul>
     </nav>
     <br>
 
     <div class="row mt-16">
-      <div class="col-sm-2" style="">
-        <div class="card rounded-0 border-0 bg-transparent">
-          <div class="card-body">
-            <div>
-              <!--Avatar and Screen Name-->
-              <div>
-                <a>
-                  <img class="rounded-circle" src="../resources/header.jpg" alt="avatar" style="width: 30px;">
-                </a>
-                <a href="#" class="text-body ml-2"><span style="color: #3b5998;"><b>responder_name</b></span></a>
+        <div class="col-sm-2" style="">
+            <div class="card rounded-0 border-0 bg-transparent">
+                <div class="card-body">
+                    <div>
+                        <!--Avatar and Screen Name-->
+                        <div>
+                            <a>
+                                <img class="rounded-circle" src="../resources/header.jpg" alt="avatar"
+                                     style="width: 30px;">
+                            </a>
+                            <a href="#" class="text-body ml-2"><span
+                                    style="color: #3b5998;"><b>responder_name</b></span></a>
 
-              </div>
-              <!--                        Personal Details-->
-              <div class="text-dark mx-2 mt-3">
-                <div class="row">
-                  <i class="col-1 fas fa-venus-mars"></i>
-                  <p class="col-7">Gender</p>
-                </div>
+                        </div>
+                        <!--                        Personal Details-->
+                        <div class="text-dark mx-2 mt-3">
+                            <div class="row">
+                                <i class="col-1 fas fa-venus-mars"></i>
+                                <p class="col-7">Gender</p>
+                            </div>
 
-                <div class="row">
-                  <i class="col-1 fas fa-map-marker-alt"></i>
-                  <p class="col-7">Location</p>
-                </div>
-              </div>
-              <!--                    Manage profile-->
-              <div class="text-dark mx-2 mt-3">
-                <div class="row">
-                  <a class="btn btn-outline-info mx-auto btn-block" href="#" role="button" name="ManageProfile"
-                    id="manage-profile">Manage My Profile</a>
-                </div>
-              </div>
-              <!--                    logout-->
-              <div class="text-dark mx-2 mt-3">
-                <div class="row">
-                  <a class="btn btn-outline-danger mx-auto btn-block" href="../index.html" role="button" name="Logout"
-                    id="logout">Logout</a>
-                </div>
-              </div>
+                            <div class="row">
+                                <i class="col-1 fas fa-map-marker-alt"></i>
+                                <p class="col-7">Location</p>
+                            </div>
+                        </div>
+                        <!--                    Manage profile-->
+                        <div class="text-dark mx-2 mt-3">
+                            <div class="row">
+                                <a class="btn btn-outline-info mx-auto btn-block" href="#" role="button"
+                                   name="ManageProfile"
+                                   id="manage-profile">Manage My Profile</a>
+                            </div>
+                        </div>
+                        <!--                    logout-->
+                        <div class="text-dark mx-2 mt-3">
+                            <div class="row">
+                                <a class="btn btn-outline-danger mx-auto btn-block" href="../index.html" role="button"
+                                   name="Logout"
+                                   id="logout">Logout</a>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <!--        Community tasks-->
-      <div class="col-sm-8" style="">
-        <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
-          <div class="card-body">
-            <div class="row">
-              <!-- User's avatar-->
-              <div class="col-1">
-                <img class="flex rounded-circle mr-2" src="../resources/header.jpg" alt="avatar" style="width: 40px;">
-              </div>
-              <!--User's name and post published time-->
-              <div class="col-9">
-                <span style="color: #3b5998"><b>publisher_name1<br></b></span>
-                <span><small>post_time</small></span>
-                <div class="my-2">
-                  Here should be the task contents...Here should be the task contents...Here should be
-                  the
-                  task contents...Here should be the task contents...
-                </div>
-                <div class="btn-group-sm mt-2">
-                  <button type="button" id="reply1" name="reply" class="btn btn-outline-primary">Reply
-                  </button>
+        <!--        Community tasks-->
+        <div id="tasks-div" class="col-sm-8" style="">
+            <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- User's avatar-->
+                        <div class="col-1">
+                            <img class="flex rounded-circle mr-2" src="../resources/header.jpg" alt="avatar"
+                                 style="width: 40px;">
+                        </div>
+                        <!--User's name and post published time-->
+                        <div class="col-9">
+                            <span style="color: #3b5998"><b>publisher_name1<br></b></span>
+                            <span><small>post_time</small></span>
+                            <div class="my-2">
+                                Here should be the task contents...Here should be the task contents...Here should be
+                                the
+                                task contents...Here should be the task contents...
+                            </div>
+                            <div class="btn-group-sm mt-2">
+                                <button type="button" id="reply1" name="reply" class="btn btn-outline-primary">Reply
+                                </button>
 
-                  <button type="button" class="btn btn-outline-info" onclick="">Take task
-                  </button>
+                                <button type="button" class="btn btn-outline-info" onclick="">Take task
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
             </div>
-
-          </div>
-        </div>
-        <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
-          <div class="card-body">
-            <div class="row">
-              <!-- User's avatar-->
-              <div class="col-1">
-                <img class="flex rounded-circle mr-2" src="../resources/header.jpg" alt="avatar" style="width: 40px;">
-              </div>
-              <!--User's name and post published time-->
-              <div class="col-9">
-                <span style="color: #3b5998"><b>publisher_name2<br></b></span>
-                <span><small>post_time</small></span>
-                <div class="my-2">
-                  Here should be the task contents...Here should be the task contents...Here should be
-                  the
-                  task contents...Here should be the task contents...
+            <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- User's avatar-->
+                        <div class="col-1 center">
+                            <img class="flex rounded-circle mr-2" src="../resources/header.jpg" alt="avatar"
+                                 style="width: 50px;">
+                        </div>
+                        <!--User's name and post published time-->
+                        <div class="col-9">
+                            <p style="color: #3b5998;font-weight: bold">publisher_name2</p>
+                            <p class="small my-n2">post_time</p>
+                            <div class="my-2">
+                                Here should be the task contents...
+                            </div>
+                            <div class="btn-group-sm mt-2">
+                                <button type="button" id="reply2" name="reply" class="btn btn-outline-primary">Reply
+                                </button>
+                                <button type="button" class="btn btn-outline-info" onclick="">Take task</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-group-sm mt-2">
-                  <button type="button" id="reply2" name="reply" class="btn btn-outline-primary">Reply
-                  </button>
-
-                  <button type="button" class="btn btn-outline-info" onclick="">Take task
-                  </button>
-                </div>
-              </div>
             </div>
-
-          </div>
         </div>
-      </div>
-
-
     </div>
-  </div>
-  <script>
+</div>
+<script>
     document.addEventListener("DOMContentLoaded", () => {
-      let xhr2 = new HttpRequest();
-      xhr2.get("https://xiao.engineer/community/api/listTask",
-        (err, response) => {
-          console.log(response);
-        });
+        let xhr2 = new HttpRequest();
+        xhr2.get("https://xiao.engineer/community/api/listTask",
+            (err, response) => {
+                console.log(response);
+                displayTasks(response);
+            });
     });
-  </script>
+
+    const displayTasks = (response) => {
+        response.forEach(addTask)
+    };
+    const addTask = (task) => {
+        let taskCard = document.createElement("div");
+        taskCard.className = "card rounded-0 shadow-sm mb-3 bg-white";
+        taskCard.id = task.id;
+
+        let taskCardBody = document.createElement("div");
+        taskCardBody.className = "card-body";
+
+        let rowElement = document.createElement("row");
+        rowElement.className = "row";
+
+        let publisherDiv = document.createElement("div");
+        publisherDiv.className = "col-1";
+
+        let publisherImg = document.createElement("img");
+        publisherImg.className = "flex rounded-circle mr-2";
+        publisherImg.src = "../resources/header.jpg";
+        publisherImg.alt = "avatar";
+        publisherImg.style = "width: 50px";
+
+        publisherDiv.append(publisherImg);
+
+        let taskDiv = document.createElement("div");
+        taskDiv.className = "col-9";
+
+        let taskTitle = document.createElement("p");
+        taskTitle.style = "color: #3b5998";
+
+        let taskTitleTXT = document.createTextNode(task.title);
+        taskTitle.style = "color:#3b5998;font-weight: bold";
+
+        taskTitle.append(taskTitleTXT);
+        taskDiv.appendChild(taskTitle);
+
+        let taskCreateTime = document.createElement("p");
+        taskCreateTime.className = "small my-n1";
+        let taskTimeTXT = document.createTextNode(task.createTime);
+
+        taskCreateTime.append(taskTimeTXT);
+        taskDiv.appendChild(taskCreateTime);
+
+        let taskLocation = document.createElement("p");
+        taskLocation.className = "small";
+        let taskLocationTXT = document.createTextNode(task.location);
+
+        taskLocation.append(taskLocationTXT);
+        taskDiv.appendChild(taskLocation);
+
+        let taskItems = document.createElement("ul");
+        let taskDate = document.createElement("li");
+        let taskDateTXT = document.createTextNode("Task Date: " + task.taskDate);
+        taskDate.append(taskDateTXT);
+        taskItems.appendChild(taskDate);
+        let taskDetails = document.createElement("li");
+        let taskDetailTXT = document.createTextNode("Task Details: " + task.details);
+        taskDetails.append(taskDetailTXT);
+        taskItems.appendChild(taskDetails);
+        taskDiv.appendChild(taskItems);
+
+        let btnGroup = document.createElement("div");
+        btnGroup.className = "btn-group-sm mt-2";
+        btnGroup.innerHTML="<button type=\"button\" id=\"reply2\" name=\"reply\" class=\"btn btn-outline-primary\">Reply\n" +
+                "                                </button>\n" +
+                "                                <button type=\"button\" class=\"btn btn-outline-info\" onclick=\"\">Take task</button>";
+        taskDiv.appendChild(btnGroup);
+
+        rowElement.append(publisherDiv);
+        rowElement.append(taskDiv);
+
+        taskCardBody.append(rowElement);
+
+        taskCard.append(taskCardBody);
+
+        document.getElementById("tasks-div").appendChild(taskCard);
+    }
+</script>
 
 </body>
 <footer style="position: fixed;bottom: 0; ">
-  <p><small>&copy; 2020 Stay at Home<br>Made in Melbourne with love</small></p>
+    <p><small>&copy; 2020 Stay at Home<br>Made in Melbourne with love</small></p>
 </footer>
 
 </html>

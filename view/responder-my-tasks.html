@@ -22,6 +22,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <!-- post get request -->
+    <script src="../inc/httpRequest.js"></script>
 </head>
 <body>
 <div class="container-fluid">
@@ -78,13 +80,12 @@
                 </div>
             </div>
         </div>
-        <!--        Community tasks-->
+        <!--        My tasks-->
         <div class="col-sm-8" style="">
             <h3 class="text-info mt-n2 mb-2">My Tasks</h3>
             <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
                 <div class="card-body">
                     <div class="row">
-
                         <div class="col-10">
                             <b><a style="color: #3b5998"
                                   href="">Help the disabled to buy daily necessities</a><br></b>
@@ -134,7 +135,6 @@
             <div class="card rounded-0 shadow-sm mb-3 bg-white" onclick="">
                 <div class="card-body">
                     <div class="row">
-
                         <div class="col-10">
                             <b><a style="color: #3b5998"
                                   href="">Help the disabled to buy daily necessities</a><br></b>
@@ -156,6 +156,10 @@
 
                 </div>
             </div>
+            <script>
+                let xhr=new HttpRequest();
+                console.log(xhr.get(HttpRequest, httpRequest.js));
+            </script>
         </div>
 
     </div>
